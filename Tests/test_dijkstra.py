@@ -1,6 +1,6 @@
 import unittest
 import networkx as nx
-from Tasks.dijkstra_real import dijkstra_algo
+from Tasks.dijkstra import dijkstra_algo
 
 
 class MyTestCase(unittest.TestCase):
