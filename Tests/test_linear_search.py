@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
 		g.add_weighted_edges_from(edges)
 
 		answer = [('E', 'F'), ('F', 'G'), ('F', 'H')]
-		self.assertIn(sorted(min_weight_search(g)), answer, "Answer should be one of {}".format(answer))
+		self.assertIn(tuple(sorted(min_weight_search(g))), answer, "Answer should be one of {}".format(answer))
 
 
 if __name__ == '__main__':
