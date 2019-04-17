@@ -1,5 +1,5 @@
 import unittest
-import Tasks.my_queue as my_queue
+import Tasks.a1_my_queue as my_queue
 
 
 class MyTestCase(unittest.TestCase):

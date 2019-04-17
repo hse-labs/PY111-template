@@ -1,5 +1,5 @@
 import unittest
-from Tasks.binary_search import binary_search
+from Tasks.b1_binary_search import binary_search
 
 
 class MyTestCase(unittest.TestCase):
