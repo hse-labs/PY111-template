@@ -1,4 +1,4 @@
-Задания для группы PY101-october
+Задания для группы PY111-april
 =
 
 **Как пользоваться данным репозиторием?**
@@ -8,7 +8,7 @@
 - Присоедините вашу ветку к этому репозиторию, выполнив следующую команду:
  
 ```
-git remote add -t master python https://github.com/maybe-hello-world/PY101-october
+git remote add -t master python https://github.com/maybe-hello-world/PY111-april
 ```
 
 Вы можете посмотреть список подключенных удаленных источников с помощью команды `git remote show`. Результат должен быть примерно следующим:
