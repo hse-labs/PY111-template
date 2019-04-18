@@ -10,6 +10,7 @@ def push(elem) -> None:
 	:param elem: element to be pushed
 	:return: Nothing
 	"""
+	print("I'm the Great hacker!")
 	return None
 
 
