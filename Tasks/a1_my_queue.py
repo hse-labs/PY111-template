@@ -2,6 +2,7 @@
 My little Queue
 """
 
+my_enqueue = []
 
 def enqueue(elem) -> None:
 	"""
@@ -10,7 +11,9 @@ def enqueue(elem) -> None:
 	:param elem: element to be added
 	:return: Nothing
 	"""
-	return None
+	if my_enqueue is not None:
+	    my_enqueue.append(elem)
+
 
 
 def dequeue():
@@ -19,7 +22,8 @@ def dequeue():
 
 	:return: dequeued element
 	"""
-	return None
+	if my_enqueue != []:
+	    return my_enqueue.pop(0)
 
 
 def peek(ind: int = 0):
@@ -38,4 +42,5 @@ def clear() -> None:
 
 	:return: None
 	"""
-	return None
+	if my_enqueue is not None:
+		my_enqueue.clear()
