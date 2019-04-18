@@ -2,7 +2,8 @@
 My little Stack
 """
 
-my_stack =[]
+my_stack = []
+
 
 def push(elem) -> None:
 	"""
@@ -25,7 +26,6 @@ def pop():
 		return my_stack.pop()
 
 
-
 def peek(ind: int = 0):
 	"""
 	Allow you to see at the element in the stack without popping it
@@ -46,13 +46,3 @@ def clear() -> None:
 	my_stack.clear()
 
 	return None
-
-
-if __name__ == "__main__":
-
-
-	push(2)
-	push(5)
-	clear()
-	print(my_stack)
-
