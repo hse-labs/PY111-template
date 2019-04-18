@@ -33,7 +33,7 @@ def peek(ind: int = 0):
 	:param ind: index of element (count from the beginning)
 	:return: peeked element
 	"""
-	return None
+	return my_enqueue[ind]
 
 
 def clear() -> None:
