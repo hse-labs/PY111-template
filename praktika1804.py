@@ -1,3 +1,4 @@
+
 def f(l):
     for i in l.split():
         yield i
@@ -5,4 +6,6 @@ def f(l):
 
 a = f("b cyjdf htibntkmysq  jq")
 for i in a:
+
+
     print(i)
