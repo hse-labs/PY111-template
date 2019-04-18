@@ -39,3 +39,5 @@ def clear() -> None:
 	:return: None
 	"""
 	return None
+
+print('Test')
