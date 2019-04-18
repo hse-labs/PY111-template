@@ -1,7 +1,7 @@
 """
 My little Queue
 """
-
+stak = []
 
 def enqueue(elem) -> None:
 	"""
@@ -10,7 +10,7 @@ def enqueue(elem) -> None:
 	:param elem: element to be added
 	:return: Nothing
 	"""
-	return None
+	return stak[max(stak)].append(elem)
 
 
 def dequeue():
