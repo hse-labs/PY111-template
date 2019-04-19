@@ -2,6 +2,7 @@
 My little Stack
 """
 
+some_list = []
 
 def push(elem) -> None:
 	"""
@@ -10,6 +11,8 @@ def push(elem) -> None:
 	:param elem: element to be pushed
 	:return: Nothing
 	"""
+	global some_list
+	some_list.append(elem)
 	return None
 
 
@@ -19,7 +22,10 @@ def pop():
 
 	:return: popped element
 	"""
-	return None
+	global some_list
+	first_variable = some_list[-1]
+	del some_list[-1]
+	return first_variable
 
 
 def peek(ind: int = 0):
@@ -29,6 +35,12 @@ def peek(ind: int = 0):
 	:param ind: index of element (count from the top)
 	:return: peeked element
 	"""
+	global some_list
+	try:
+		some_variable = some_list[ind]
+		print(some_variable)
+	except IndexError:
+		print(f"элемента с индексом {ind} не существует")
 	return None
 
 
@@ -38,4 +50,13 @@ def clear() -> None:
 
 	:return: None
 	"""
+	global some_list
+	some_list.clear()
 	return None
+
+if __name__ == '__main__':
+	push('a')
+	push('b')
+	push('c')
+	pop()
+	peek(1)
