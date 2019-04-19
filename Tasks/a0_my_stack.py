@@ -39,7 +39,7 @@ def peek(ind: int = 0):
     :return: peeked element
     """
     global stack
-    return stack[-1-ind] if stack[-1-ind] else None
+    return stack[-1 - ind] if stack[-1 - ind] else None
 
 
 def clear() -> None:
@@ -51,9 +51,3 @@ def clear() -> None:
     global stack
     stack.clear()
     return None
-
-
-
-
-
-
