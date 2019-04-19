@@ -31,7 +31,6 @@ def pop():
 		return None
 
 
-
 def peek(ind: int = 0):
 	"""
 	Allow you to see at the element in the stack without popping it
