@@ -22,7 +22,7 @@ def dequeue():
 
 	:return: dequeued element
 	"""
-	if my_enqueue != []:
+	if my_enqueue:
 	    return my_enqueue.pop(0)
 
 
