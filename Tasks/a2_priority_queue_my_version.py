@@ -4,7 +4,8 @@ Priority Queue
 Queue priorities are from 0 to 5
 """
 my_priority_enqueue = []
-def enqueue(elem, priority: int = 0) -> None:
+
+def enqueue(elem, priority: int = 0 ) -> None:
 	"""
 	Operation that add element to the end of the queue
 
@@ -56,3 +57,20 @@ def clear() -> None:
 	if my_priority_enqueue is not None:
 		my_priority_enqueue.clear()
 	return None
+
+my_priority_enqueue = [['val0',0],['val1',1],['val2',1],['val3',3]]
+print(my_priority_enqueue)
+clear()
+print(my_priority_enqueue)
+my_priority_enqueue = [['val0',0],['val1',1],['val2',1],['val3',3]]
+enqueue('new_elem')
+print(my_priority_enqueue)
+enqueue('new_elem2', 1)
+print(my_priority_enqueue)
+enqueue('new_elem2', 4)
+print(my_priority_enqueue)
+print(dequeue())
+print(my_priority_enqueue)
+print(peek(0,1))
+print(peek(1,1))
+print(peek(0,3))
