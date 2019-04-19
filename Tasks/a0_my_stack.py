@@ -1,8 +1,8 @@
 """
 My little Stack
 """
-
 some_list = []
+
 
 def push(elem) -> None:
 	"""
@@ -53,6 +53,7 @@ def clear() -> None:
 	global some_list
 	some_list.clear()
 	return None
+
 
 if __name__ == '__main__':
 	push('a')
