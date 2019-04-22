@@ -9,7 +9,6 @@ class MyTestCase(unittest.TestCase):
 	def test_clear(self):
 		priority_queue.enqueue(3)
 		priority_queue.clear()
-		print(priority_queue)
 
 		self.assertIsNone(priority_queue.dequeue())
 
