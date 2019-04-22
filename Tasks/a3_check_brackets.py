@@ -1,5 +1,3 @@
-
-
 def check_brackets(brackets_row: str) -> bool:
     """
     Check whether input string is a valid bracket sequence
@@ -15,5 +13,3 @@ def check_brackets(brackets_row: str) -> bool:
         if i == ')':
             d += 1
     return False if s != d else True
-
-

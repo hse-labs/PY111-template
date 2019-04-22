@@ -49,4 +49,4 @@ def clear() -> None:
     """
     for i in test_dict:
         i = None
-    return
+    return None
