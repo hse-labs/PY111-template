@@ -11,7 +11,7 @@ def enqueue(elem) -> None:
     :param elem: element to be added
     :return: Nothing
     """
-    return stak.append(elem)
+    stak.append(elem)
 
 
 def dequeue():
@@ -20,7 +20,7 @@ def dequeue():
 
     :return: dequeued element
     """
-    if stak is not None:
+    if stak != []:
         point = stak[0]
         del stak[0]
         return point
@@ -35,7 +35,7 @@ def peek(ind: int = 0):
     :param ind: index of element (count from the beginning)
     :return: peeked element
     """
-    if stak is not None:
+    if stak != []:
         return stak[ind] if stak[ind] else None
 
 
@@ -45,5 +45,4 @@ def clear() -> None:
 
     :return: None
     """
-
-    return stak.clear()
+    stak.clear()

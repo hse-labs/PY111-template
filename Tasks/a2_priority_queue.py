@@ -3,7 +3,7 @@ Priority Queue
 
 Queue priorities are from 0 to 5
 """
-test_dict = [[], [], [], [], []]
+test_dict = [[], [], [], [], [], []]
 
 
 def enqueue(elem, priority: int = 0) -> None:
@@ -24,7 +24,7 @@ def dequeue():
     :return: dequeued element
     """
     for i in range(6):
-        if test_dict[i]:
+        if test_dict[i] != []:
             elem = test_dict[i][0]
             del test_dict[i][0]
             return elem
@@ -38,7 +38,10 @@ def peek(ind: int = 0, priority: int = 0):
     :param ind: index of element (count from the beginning)
     :return: peeked element
     """
-    return test_dict[priority][ind] if test_dict[priority][ind] else None
+    if test_dict[priority][ind] != []:
+        return test_dict[priority][ind]
+    else:
+        return None
 
 
 def clear() -> None:
@@ -47,6 +50,7 @@ def clear() -> None:
 
     :return: None
     """
-    for i in test_dict:
-        i = None
+    for i in range(6):
+        if test_dict[i] != []:
+            test_dict[i].clear()
     return None

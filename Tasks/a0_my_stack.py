@@ -36,7 +36,7 @@ def peek(ind: int = 0):
     try:
 
         s = stak[ind - 1]
-    except(IndexError):
+    except IndexError:
         return None
     else:
         return s
@@ -48,4 +48,5 @@ def clear() -> None:
 
     :return: None
     """
-    return stak.clear()
+    stak.clear()
+    return None

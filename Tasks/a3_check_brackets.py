@@ -6,10 +6,11 @@ def check_brackets(brackets_row: str) -> bool:
     """
 
     s = 0
-    d = 0
     for i in brackets_row:
         if i == '(':
             s += 1
-        if i == ')':
-            d += 1
-    return False if s != d else True
+        else:
+            s -= 1
+            if s <= -1:
+                return False
+    return False if s != 0 else True
