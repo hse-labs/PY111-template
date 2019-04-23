@@ -33,8 +33,13 @@ def peek(ind: int = 0):
         :param ind: index of element (count from the top)
         :return: peeked element
         """
-    if stak is not None:
-        return stak[ind - 1]
+    try:
+
+        s = stak[ind - 1]
+    except(IndexError):
+        return None
+    else:
+        return s
 
 
 def clear() -> None:
