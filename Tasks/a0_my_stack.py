@@ -11,7 +11,7 @@ def push(elem) -> None:
     :param elem: element to be pushed
     :return: Nothing
     """
-    return stak.append(elem)
+    stak.append(elem)
 
 
 def pop():
