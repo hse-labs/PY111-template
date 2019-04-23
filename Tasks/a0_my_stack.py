@@ -5,6 +5,7 @@ My little Stack
 
 my_stack = []
 
+
 def push(elem) -> None:
 	"""
 	Operation that add element to stack
@@ -22,7 +23,7 @@ def pop():
 
 	:return: popped element
 	"""
-	if my_stack == []:
+	if my_stack:
 		return None
 	else:
 		return my_stack.pop()
