@@ -2,6 +2,10 @@
 Taylor series
 """
 
+x = int
+e = float
+
+
 def ex(x) -> float:
 	"""
 	Calculate value of e^x with Taylor series
@@ -9,6 +13,9 @@ def ex(x) -> float:
 	:param x: x value
 	:return: e^x value
 	"""
+	global e
+	for i in range(10000):
+		e = 1
 	return None
 
 
