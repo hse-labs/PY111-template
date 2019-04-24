@@ -1,7 +1,6 @@
 import unittest
 import numpy as np
-import networkx as nx
-from Tasks.b0_linear_search import min_search, min_weight_search
+from Tasks.b0_linear_search import min_search
 
 
 class MyTestCase(unittest.TestCase):
