@@ -11,7 +11,7 @@ def push(elem) -> None:
     :param elem: element to be pushed
     :return: Nothing
     """
-    return stak.append(elem)
+    stak.append(elem)
 
 
 def pop():
@@ -33,8 +33,13 @@ def peek(ind: int = 0):
         :param ind: index of element (count from the top)
         :return: peeked element
         """
+    try:
 
-    return stak[ind - 1]
+        s = stak[ind - 1]
+    except IndexError:
+        return None
+    else:
+        return s
 
 
 def clear() -> None:
@@ -43,4 +48,5 @@ def clear() -> None:
 
     :return: None
     """
-    return stak.clear()
+    stak.clear()
+    return None
