@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
 		arr = [i for i in range(10, -3, -1)]
 		self.assertEqual(min_search(arr), min(arr), "Minimal element is wrong, right answer: " + str(min(arr)))
 
-		arr = np.random.rand(1, 300).tolist()
+		arr = np.random.rand(1, 300).tolist()[0]
 		self.assertEqual(min_search(arr), min(arr), "Minimal element is wrong, right answer: " + str(min(arr)))
 
 if __name__ == '__main__':
