@@ -8,7 +8,6 @@ my_queue = []
 
 def enqueue(elem) -> None:
 	"""
-
 	Operation that add element to the end of the queue
 
 	:param elem: element to be added
@@ -24,7 +23,7 @@ def dequeue():
 
 	:return: dequeued element
 	"""
-	if my_queue == []:
+	if my_queue:
 		return None
 	else:
 		return my_queue.pop(0)
@@ -32,7 +31,6 @@ def dequeue():
 
 def peek(ind: int = 0):
 	"""
-
 	Allow you to see at the element in the queue without dequeuing it
 
 	:param ind: index of element (count from the beginning)
@@ -43,7 +41,6 @@ def peek(ind: int = 0):
 
 def clear() -> None:
 	"""
-
 	Clear my queue
 
 	:return: None
