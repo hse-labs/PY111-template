@@ -1,41 +1,69 @@
 """
 My little Queue
 """
+q = []
 
 
 def enqueue(elem) -> None:
-	"""
-	Operation that add element to the end of the queue
+    """
+    Operation that add element to the end of the queue
 
-	:param elem: element to be added
-	:return: Nothing
-	"""
-	return None
+    :param elem: element to be added
+    :return: Nothing
+    """
+    global q
+    q = q[::-1]
+    q.append(elem)
+    q = q[::-1]
+    return None
 
 
 def dequeue():
-	"""
-	Return element from the beginning of the queue
+    """
+    Return element from the beginning of the queue
 
-	:return: dequeued element
-	"""
-	return None
+    :return: dequeued element
+    """
+    global q
+    if len(q) > 0:
+        dq = q[-1]
+        del q[-1]
+        return dq
+    else:
+        return None
 
 
 def peek(ind: int = 0):
-	"""
-	Allow you to see at the element in the queue without dequeuing it
+    """
+    Allow you to see at the element in the queue without dequeuing it
 
-	:param ind: index of element (count from the beginning)
-	:return: peeked element
-	"""
-	return None
+    :param ind: index of element (count from the beginning)
+    :return: peeked element
+    """
+    global q
+    return q[len(q) - ind - 1]
 
 
 def clear() -> None:
-	"""
-	Clear my queue
+    """
+    Clear my queue
 
-	:return: None
-	"""
-	return None
+    :return: None
+    """
+    global q
+    q = []
+    return None
+
+
+if __name__ == "__main__":
+    enqueue(1)
+    print(q)
+    enqueue(2)
+    print(q)
+    enqueue(3)
+    print(q)
+    enqueue(4)
+    print(q)
+    dequeue()
+    print(q)
+    print(peek(1))
