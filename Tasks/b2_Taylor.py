@@ -9,6 +9,7 @@ def ex(x) -> float:
 	:param x: x value
 	:return: e^x value
 	"""
+
 	return None
 
 
