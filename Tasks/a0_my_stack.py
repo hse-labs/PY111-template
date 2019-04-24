@@ -23,9 +23,13 @@ def pop():
     :return: popped element
     """
     global some_list
-    first_variable = some_list[-1]
-    del some_list[-1]
-    return first_variable
+    if len(some_list) > 0:
+        first_variable = some_list[-1]
+        del some_list[-1]
+        return first_variable
+    else:
+        return None
+
 
 
 def peek(ind: int = 0):

@@ -14,5 +14,4 @@ def min_search(arr) -> int:
 	for i in arr:
 		if i < min_num:
 			min_num = i
-	return min_num
-
+	return arr.index(min_num)
