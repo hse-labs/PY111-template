@@ -12,9 +12,7 @@ def enqueue(elem) -> None:
     :return: Nothing
     """
     global q
-    q = q[::-1]
-    q.append(elem)
-    q = q[::-1]
+    q.insert(0, elem)
     return None
 
 
@@ -41,7 +39,14 @@ def peek(ind: int = 0):
     :return: peeked element
     """
     global q
-    return q[len(q) - ind - 1]
+    if ind < 0:
+        return None
+    if abs(ind) > len(q):
+        return None
+    if len(q) - ind - 1 >= 0:
+        return q[len(q) - ind - 1]
+    else:
+        return None
 
 
 def clear() -> None:
@@ -66,4 +71,4 @@ if __name__ == "__main__":
     print(q)
     dequeue()
     print(q)
-    print(peek(1))
+    print(peek(5))
