@@ -35,8 +35,11 @@ def peek(ind: int = 0):
     :param ind: index of element (count from the beginning)
     :return: peeked element
     """
-    if stak != []:
-        return stak[ind] if stak[ind] else None
+    try:
+        if stak != []:
+            return stak[ind] if stak[ind] else None
+    except IndexError:
+        return None
 
 
 def clear() -> None:
