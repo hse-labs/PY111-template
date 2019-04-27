@@ -25,10 +25,10 @@ class MyTestCase(unittest.TestCase):
 		self.assertIn(
 			result,
 			[
-				'ABDEGCF',
-				'ABEGDCF',
-				'ACFBDEG',
-				'ACFBEGD'
+				list('ABDEGCF'),
+				list('ABEGDCF'),
+				list('ACFBDEG'),
+				list('ACFBEGD')
 			],
 			msg="Возвращаемый список несоответствует нужному порядку обхода."
 		)
