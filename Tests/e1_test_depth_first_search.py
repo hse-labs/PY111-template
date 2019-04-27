@@ -6,7 +6,7 @@ import Tasks.e1_depth_first_search as dfs
 class MyTestCase(unittest.TestCase):
 	def test_dfs(self):
 		graph = nx.Graph()
-		graph.add_nodes_from(["ABCDEFG"])
+		graph.add_nodes_from("ABCDEFG")
 		graph.add_edges_from([
 			('A', 'B'),
 			('A', 'C'),
