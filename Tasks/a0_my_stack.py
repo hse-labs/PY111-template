@@ -3,6 +3,7 @@ My little l
 """
 stack = []
 
+
 def push(elem) -> None:
 	"""
 	Operation that add element to stack

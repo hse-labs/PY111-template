@@ -5,6 +5,7 @@ Queue priorities are from 0 to 5
 """
 queue = {i: [] for i in range(6)}
 
+
 def enqueue(elem, priority: int = 0) -> None:
 	"""
 	Operation that add element to the end of the queue

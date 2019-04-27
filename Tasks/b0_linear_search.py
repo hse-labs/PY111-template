@@ -16,6 +16,4 @@ def min_search(arr) -> int:
 		if arr[i] < minim:
 			minim = arr[i]
 			ind = i
-
-
 	return ind

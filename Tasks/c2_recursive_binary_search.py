@@ -6,17 +6,19 @@ def binary_search(elem, arr):
 	:param arr: array where element is to be found
 	:return: Index of element if it's presented in the arr, None otherwise
 	"""
-	left_bound = 0
-	right_bound = len(arr)
 
-	while right_bound - left_bound > 1:
-		middle_ind = (left_bound + right_bound) // 2
-		if arr[middle_ind] > elem:
-			right_bound = middle_ind
-		elif arr[middle_ind] < elem:
-			left_bound = middle_ind
-		elif arr[middle_ind] == elem:
-			return middle_ind
-	if arr[middle_ind - 1] == elem:
-		return middle_ind - 1
-	return None
+	ind = len(arr)//2
+	if arr[ind] == elem:
+		return ind
+	elif len(arr) == 1 and arr[ind] != elem:
+		return None
+	else:
+		if arr[ind] > elem:
+			ind = binary_search(elem, arr[:ind])
+			return ind
+		elif arr[ind] < elem:
+			try:
+				ind = ind + binary_search(elem, arr[ind:])
+			except TypeError:
+				return None
+			return ind

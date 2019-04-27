@@ -31,6 +31,7 @@ def fib_iterative(n: int) -> int:
 		return 1
 	i = 1
 	first_n, second_n = 0, 1
+	number = 0
 	while i < n:
 		number = first_n + second_n
 		first_n, second_n = second_n, number
