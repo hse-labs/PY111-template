@@ -30,9 +30,9 @@ class MyTestCase(unittest.TestCase):
 		)
 
 		result = \
-			list(result[0]) \
+			[result[0]] \
 			+ sorted(result[1:3]) \
-			+ list(result[3]) \
+			+ [result[3]] \
 			+ sorted(result[4:7]) \
 			+ sorted(result[7:])
 

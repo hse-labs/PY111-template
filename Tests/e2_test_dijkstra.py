@@ -1,11 +1,13 @@
 import unittest
 import networkx as nx
+from typing import Mapping, Hashable
+
 from Tasks.e2_dijkstra import dijkstra_algo
 
 
 class MyTestCase(unittest.TestCase):
 	@staticmethod
-	def dict_equal(a: dict, b: dict):
+	def dict_equal(a: Mapping[Hashable, int], b: Mapping[Hashable, int]):
 		for k in a.keys():
 			if a[k] != b[k]:
 				return False

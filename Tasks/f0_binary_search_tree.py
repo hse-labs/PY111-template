@@ -1,8 +1,8 @@
-from typing import Any
+from typing import Hashable, Any, Optional
 # import networkx as nx
 
 
-def insert(key: Any, value: Any) -> None:
+def insert(key: Hashable, value: Any) -> None:
 	"""
 	Insert (key, value) pair to binary search tree
 
@@ -14,18 +14,18 @@ def insert(key: Any, value: Any) -> None:
 	return None
 
 
-def remove(key: Any) -> (Any, Any):
+def remove(key: Hashable) -> Optional[(Any, Any)]:
 	"""
-	Remove key and associated value from the BST
+	Remove key and associated value from the BST if exists
 
 	:param key: key to be removed
-	:return: deleted (key, value) pair
+	:return: deleted (key, value) pair or None
 	"""
 	print(key)
 	return None
 
 
-def find(key: Any) -> Any:
+def find(key: Hashable) -> Optional:
 	"""
 	Find value by given key in the BST
 

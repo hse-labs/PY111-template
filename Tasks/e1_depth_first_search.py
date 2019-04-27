@@ -1,8 +1,8 @@
-from typing import Any
+from typing import Hashable, List
 import networkx as nx
 
 
-def dfs(g: nx.Graph, start_node: Any) -> list:
+def dfs(g: nx.Graph, start_node: Hashable) -> List[Hashable]:
 	"""
 	Do an depth-first search and returns list of nodes in the visited order
 

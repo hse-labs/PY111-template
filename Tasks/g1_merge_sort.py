@@ -1,9 +1,9 @@
 from typing import Sequence, TypeVar
 
-_Tt = TypeVar("T")
+__Tt = TypeVar("T")
 
 
-def sort(container: Sequence[_Tt]) -> Sequence[_Tt]:
+def sort(container: Sequence[__Tt]) -> Sequence[__Tt]:
 	"""
 	Sort input container with merge sort
 
