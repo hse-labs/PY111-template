@@ -10,5 +10,16 @@ def bfs(g: nx.Graph, start_node: Any) -> list:
 	:param start_node: starting node for search
 	:return: list of nodes in the visited order
 	"""
+	queue = [start_node]
+	visited = [start_node]
+	paths = {i: [i] for i in list(g.nodes)[1:]}
+	while queue:
+		for i in queue:
+			for j in g[i]:
+				if j not in visited:
+					visited.append(j)
+					queue.append(j)
+					paths[j] = paths[i] + paths[j]
+			del queue[0]
 	print(g, start_node)
-	return list(g.nodes)
+	return visited
