@@ -16,6 +16,10 @@ def enqueue(elem) -> None:
     return None
 
 
+def length():
+    return len(q)
+
+
 def dequeue():
     """
     Return element from the beginning of the queue

@@ -4,6 +4,10 @@ My little Stack
 stek = []
 
 
+def length():
+	return len(stek)
+
+
 def push(elem) -> None:
 	"""
 	Operation that add element to stack
