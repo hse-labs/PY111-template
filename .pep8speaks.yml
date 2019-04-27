@@ -1,0 +1,9 @@
+# File : .pep8speaks.yml
+
+pycodestyle:  # Same as scanner.linter value. Other option is flake8
+    max-line-length: 120  # Default is 79 in PEP 8
+    ignore:  # Errors and warnings to ignore
+        - W191  # indentation contains tabs
+        - E117  # over-indented
+        
+no_blank_comment: False  # If True, no comment is made on PR without any errors.
