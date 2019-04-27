@@ -14,7 +14,7 @@ class MyTestCase(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.G = nx.DiGraph()
-		cls.G.add_nodes_from([i for i in "ABCDEFG"])
+		cls.G.add_nodes_from("ABCDEFG")
 		cls.G.add_weighted_edges_from([
 			("A", "B", 1),
 			("B", "C", 3),
