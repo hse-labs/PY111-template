@@ -12,7 +12,7 @@ def bfs(g: nx.Graph, start_node: Any) -> list:
 	:return: list of nodes in the visited order
 	"""
 
-	explored_nodes = []	#посещённые вершины
+	explored_nodes = [start_node]	#посещённые вершины
 	stack = [start_node]
 
 	while stack:
@@ -24,6 +24,6 @@ def bfs(g: nx.Graph, start_node: Any) -> list:
 				stack.append(i)
 	print(g, start_node)
 
-	return list(g.nodes)
+	return explored_nodes
 
 
