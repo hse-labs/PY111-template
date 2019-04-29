@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content %}
+		<form action="/edit_action" method="post">
+			<fieldset>
+			<legend>Редактирование записы ID: {{ writing_id}}</legend>
+				<input type="hidden" name="writing_id" value="{{ writing_id}}" />
+				<label for="author">Автор</label>
+				<input type="text" name="author" value="{{ author }}"> 
+				<label for="author">Произведение</label>
+				<input type="text" name="writing" value="{{ writing }}">
+				<input type="submit" value="Изменить" />
+			</fieldset>
+		</form>
+{% endblock %}

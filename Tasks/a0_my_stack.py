@@ -4,6 +4,7 @@ My little Stack
 
 my_stack = []
 
+
 def push(elem) -> None:
 	"""
 	Operation that add element to stack
@@ -45,4 +46,3 @@ def clear() -> None:
 	"""
 	my_stack.clear()
 	return None
-

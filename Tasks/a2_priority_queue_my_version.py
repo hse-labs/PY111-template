@@ -5,11 +5,13 @@ Queue priorities are from 0 to 5
 """
 my_priority_enqueue = []
 
-def enqueue(elem, priority: int = 0 ) -> None:
+
+def enqueue(elem, priority: int = 0) -> None:
 	"""
 	Operation that add element to the end of the queue
 
 	:param elem: element to be added
+	:param priority: element priority
 	:return: Nothing
 	"""
 	global my_priority_enqueue
@@ -32,20 +34,22 @@ def dequeue():
 	if my_priority_enqueue:
 		return my_priority_enqueue.pop(0)
 
+
 def peek(ind: int = 0, priority: int = 0):
 	"""
 	Allow you to see at the element in the queue without dequeuing it
 
 	:param ind: index of element (count from the beginning)
+	:param priority: element priority
 	:return: peeked element
 	"""
 	global my_priority_enqueue
 	local_counter = 0
 	for counter, value in enumerate(my_priority_enqueue):
 		if priority == value[1]:
-		    if local_counter == ind:
-		        return my_priority_enqueue[counter]
-		    local_counter += 1
+			if local_counter == ind:
+				return my_priority_enqueue[counter]
+			local_counter += 1
 
 
 def clear() -> None:
@@ -58,11 +62,9 @@ def clear() -> None:
 		my_priority_enqueue.clear()
 	return None
 
-my_priority_enqueue = [['val0',0],['val1',1],['val2',1],['val3',3]]
 print(my_priority_enqueue)
 clear()
 print(my_priority_enqueue)
-my_priority_enqueue = [['val0',0],['val1',1],['val2',1],['val3',3]]
 enqueue('new_elem')
 print(my_priority_enqueue)
 enqueue('new_elem2', 1)
@@ -71,6 +73,6 @@ enqueue('new_elem2', 4)
 print(my_priority_enqueue)
 print(dequeue())
 print(my_priority_enqueue)
-print(peek(0,1))
-print(peek(1,1))
-print(peek(0,3))
+print(peek(0, 1))
+print(peek(1, 1))
+print(peek(0, 3))

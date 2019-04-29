@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block content %}
+	<table>
+	{% for writng in writings %}
+		<tr><td>{{ writng.author }}</td>
+		 	<td>"{{ writng.writing }}"</td>
+			<td><form action="/del" method="post">
+					<input type="hidden" name="writing_id" value="{{ writng.writng_id }}" />
+					<input type="submit" value="Удалить" />
+				</form>
+			</td>
+			<td><form action="/edit_page" method="post">
+					<input type="hidden" name="writing_id" value="{{ writng.writng_id }}" />
+					<input type="submit" value="Изменить" />
+				</form>
+			</td>
+
+		</tr>
+	{% endfor %}
+	</table>
+   	<nav>
+   	{% if page == 0 %}
+		Страница {{ page }}
+		<a href="{{ url_for('index')}}{{ page + 1 }}">следующая</a>
+	{% elif page > 0 and has_next%}
+		<a href="{{ url_for('index')}}{{ page + -1 }}">предыддущая</a>
+		страница {{ page }}
+		<a href="{{ url_for('index')}}{{ page + 1 }}">следующая</a>
+	{% else %}
+		<a href="{{ url_for('index')}}{{ page + -1 }}">предыддущая</a>
+		страница {{ page }}
+	{% endif %}
+    </nav>
+{% endblock %}

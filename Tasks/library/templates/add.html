@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block content %}
+		<form action="/add" method="post">
+			<fieldset>
+			<legend>Добавить запись</legend>
+				<label for="author">Автор</label>
+				<input type="text" name="author"> 
+				<label for="author">Книга</label>
+				<input type="text" name="writing">
+				<input type="submit" value="Добавить" />
+			</fieldset>
+		</form>
+{% endblock %}

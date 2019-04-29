@@ -1,6 +1,8 @@
+from math import factorial
 """
 Taylor series
 """
+
 
 def ex(x) -> float:
 	"""
@@ -9,7 +11,13 @@ def ex(x) -> float:
 	:param x: x value
 	:return: e^x value
 	"""
-	return None
+
+	ex_ = 1
+	n = 1
+	for value in range(10):
+		ex_ += (x ** n) / factorial(n)
+		n += 1
+	return float(ex_)
 
 
 def sinx(x) -> float:
@@ -19,4 +27,12 @@ def sinx(x) -> float:
 	:param x: x value
 	:return: sin(x) value
 	"""
-	return None
+	sinx_ = x
+	n = 3
+	y = 1
+	for value in range(10):
+		sinx_ += - y * (x ** n)/factorial(n)
+		y *= - 1
+		n += 2
+
+	return sinx_

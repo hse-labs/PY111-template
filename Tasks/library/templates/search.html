@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% block content %}
+		<form action="/search" method="post">
+			<fieldset>
+			<legend>Поиск</legend>
+				<label for="author">Поисковый запрос</label>
+				<input type="text" name="writing">
+				<input type="submit" value="Искать" />
+			</fieldset>
+		</form>
+		{% if True %}
+			<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Автор</td>
+					<td>Книга</td>
+				</tr>
+			</thead>
+			{% for writng in writings_list %}
+				<tr>
+
+					<td>{{ writng.writng_id }}</td>
+					<td>{{ writng.author }}</td>
+					<td>{{ writng.writing }}</td>
+					<td><form action="/del" method="post">
+							<input type="hidden" name="writing_id" value="{{ writng.writng_id }}" />
+							<input type="submit" value="Удалить" />
+						</form>
+					</td>
+					<td><form action="/edit_page" method="post">
+							<input type="hidden" name="writing_id" value="{{ writng.writng_id }}" />
+							<input type="submit" value="Изменить" />
+						</form>
+					</td>
+				 	
+				</tr>
+			{% endfor %}
+			</table>
+		{% endif %}
+	</body>
+</html>
+{% endblock %}

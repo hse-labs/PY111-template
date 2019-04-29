@@ -4,11 +4,14 @@ Priority Queue
 Queue priorities are from 0 to 5
 """
 my_priority_enqueue = []
+
+
 def enqueue(elem, priority: int = 0) -> None:
 	"""
 	Operation that add element to the end of the queue
 
 	:param elem: element to be added
+	:param priority: element priority
 	:return: Nothing
 	"""
 	global my_priority_enqueue
@@ -31,20 +34,23 @@ def dequeue():
 	if my_priority_enqueue:
 		return my_priority_enqueue.pop(0)
 
+
 def peek(ind: int = 0, priority: int = 0):
 	"""
 	Allow you to see at the element in the queue without dequeuing it
 
 	:param ind: index of element (count from the beginning)
+	:param priority: element priority
 	:return: peeked element
+
 	"""
 	global my_priority_enqueue
 	local_counter = 0
 	for counter, value in enumerate(my_priority_enqueue):
 		if priority == value[1]:
-		    if local_counter == ind:
-		        return my_priority_enqueue[counter]
-		    local_counter += 1
+			if local_counter == ind:
+				return my_priority_enqueue[counter]
+			local_counter += 1
 
 
 def clear() -> None:

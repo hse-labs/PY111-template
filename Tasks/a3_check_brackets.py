@@ -7,9 +7,10 @@ def check_brackets(brackets_row: str) -> bool:
 	b = 0
 
 	for letter in brackets_row:
-		if letter == '(':
-			b += 1
-		elif letter == ')':
+		if letter == ')':
 			b -= 1
-
+			if b < 0 :
+				return False
+		elif letter == '(':
+			b += 1
 	return not bool(b)
