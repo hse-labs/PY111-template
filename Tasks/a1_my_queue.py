@@ -36,8 +36,7 @@ def peek(ind: int = 0):
     :return: peeked element
     """
     try:
-        if stak != []:
-            return stak[ind] if stak[ind] else None
+        return stak[ind]
     except IndexError:
         return None
 
@@ -49,3 +48,11 @@ def clear() -> None:
     :return: None
     """
     stak.clear()
+
+if __name__ == '__main__':
+    enqueue(0)
+
+    enqueue(3)
+
+    print(stak)
+    print(peek(-3))
