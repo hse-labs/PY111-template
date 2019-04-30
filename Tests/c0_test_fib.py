@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
 
 	def test_fib_exc(self):
 		with self.assertRaises(ValueError,
-							   msg="Is there a 3.5 number of Fibonacci sequence? I think here should be an exception..."):
+							   msg="Is there a -35 number of Fibonacci sequence? I think here should be an exception..."):
 			fib.fib_recursive(-35)
 
 	def test_fib_iterative(self):
