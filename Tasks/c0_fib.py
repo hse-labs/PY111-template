@@ -6,7 +6,7 @@ def fib_recursive(n: int) -> int:
 	:return: Fibonacci number
 	"""
 	if n < 0 or type(n) == float:
-		raise ValueError
+		raise ValueError("Функция определена только для натуральных чисел")
 	if n == 0:
 		return 0
 	if n == 1:
@@ -24,16 +24,14 @@ def fib_iterative(n: int) -> int:
 	:return: Fibonacci number
 	"""
 	if n < 0 or type(n) == float:
-		raise ValueError
+		raise ValueError("Функция определена только для натуральных чисел")
 	if n == 1:
 		return 0
 	if n == 2:
 		return 1
-	i = 1
 	first_n, second_n = 0, 1
 	number = 0
-	while i < n:
+	for _ in range(2, n+1):
 		number = first_n + second_n
 		first_n, second_n = second_n, number
-		i += 1
 	return number

@@ -5,15 +5,14 @@ def check_brackets(brackets_row: str) -> bool:
 	:return: True if valid, False otherwise
 	"""
 	brackets_stack = []
-	brackets_dict = {')': '(', '}': '{', ']': '['}
+	brackets_dict = {'(': ')', '{': '}', '[': ']'}
 	for i in brackets_row:
-		if i not in [')', '(', '}', '{', ']', '[']:
-			continue
-		if i in brackets_dict.values():
+		if i in brackets_dict:
 			brackets_stack.append(i)
-		elif i in brackets_dict.keys():
+		else:
 			try:
-				assert brackets_stack.pop() == brackets_dict[i]
+				op_bracket = brackets_stack.pop()
+				assert brackets_dict[op_bracket] == i
 			except (IndexError, AssertionError):
 				return False
 	if not brackets_stack:

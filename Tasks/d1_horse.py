@@ -12,17 +12,14 @@ def calculate_paths(shape: Tuple[int, int], point: Tuple[int, int]) -> int:
 	"""
 	rows, cols = shape
 	field = [[0 for _ in range(cols)] for _ in range(rows)]
-	field[0][0] = 1
+	field[1][2] = 2
+	field[2][1] = 2
 
-	for row in range(rows):
+	for row in range(1, rows):
 		for col in range(cols):
 			if field[row][col] != 0:
 				available_steps = [[row + 2, col - 1], [row + 1, col - 2], [row + 2, col + 1], [row + 1, col + 2]]
 				for step in available_steps:
 					if 0 <= step[0] < rows and 0 <= step[1] < cols:
-						if field[step[0]][step[1]] > 0:
-							field[step[0]][step[1]] += field[row][col]
-						else:
-							field[step[0]][step[1]] = 1
-	return field[point[0]][point[1]]
-
+						field[step[0]][step[1]] += 2 * field[row][col]
+	return (field[point[0]][point[1]])

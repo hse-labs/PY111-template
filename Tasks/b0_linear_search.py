@@ -12,7 +12,7 @@ def min_search(arr) -> int:
 	"""
 	ind = 0
 	minim = arr[0]
-	for i in range(len(arr)):
+	for i in range(1, len(arr)):
 		if arr[i] < minim:
 			minim = arr[i]
 			ind = i
