@@ -11,7 +11,7 @@ def fib_recursive(n: int) -> int:
         return 0
     elif n < 0:
         raise ValueError
-    return fib_recursive(n-2) + fib_recursive(n-1)
+    return fib_recursive(n - 2) + fib_recursive(n - 1)
 
 
 def fib_iterative(n: int) -> int:

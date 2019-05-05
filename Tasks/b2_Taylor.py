@@ -30,8 +30,8 @@ def sinx(x) -> float:
     x = x % (2 * math.pi)
     res = x
     for i in range(1, 85):
-        fact *= 2*i * (2 * i + 1)
-        res += (-1)**i * x**(2*i + 1) / fact
+        fact *= 2 * i * (2 * i + 1)
+        res += (-1) ** i * x ** (2 * i + 1) / fact
     return res
 
 

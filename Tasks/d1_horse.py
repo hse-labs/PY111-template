@@ -1,5 +1,6 @@
-import numpy as np
+# import numpy as np
 from typing import Tuple
+
 
 def calculate_paths(shape: Tuple[int, int], point: Tuple[int, int]) -> int:
     """
@@ -45,7 +46,7 @@ def calculate_paths(shape: Tuple[int, int], point: Tuple[int, int]) -> int:
             cells[idx] = (i, j)
     if point == (2, 1) or point == (1, 2):
         return 2
-    return 2 * (calculate_paths(shape, cells[0]) + calculate_paths(shape, cells[1]) + \
+    return 2 * (calculate_paths(shape, cells[0]) + calculate_paths(shape, cells[1]) +
                 calculate_paths(shape, cells[2]) + calculate_paths(shape, cells[3]))
 
 
