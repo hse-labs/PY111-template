@@ -25,7 +25,8 @@ def fib_iterative(n: int) -> int:
 	:return: Fibonacci number
 	"""
 
-	assert n < 0 or type(n) == float, ValueError
+	if n < 0 or type(n) == float:
+		raise ValueError
 
 	fib1 = 1
 	fib2 = 1
