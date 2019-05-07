@@ -7,18 +7,18 @@ class MyTestCase(unittest.TestCase):
 	def test_begin(self):
 		haystack = "Hello, tiny world!"
 		needle = "Hell"
-		self.assertEqual(kmp_algo(haystack, needle), 0, "Right index is 0")
+		self.assertEqual(0, kmp_algo(haystack, needle), "Right index is 0")
 
 	def test_end(self):
 		haystack = "All these moments will be lost in time..."
 		needle = "time..."
-		self.assertEqual(kmp_algo(haystack, needle), 34, "'time...' is in the end")
+		self.assertEqual(34, kmp_algo(haystack, needle), "'time...' is in the end")
 
 	def test_middle(self):
 		haystack = "Шел я лесом, вижу мост, на мосту ворона сохнет. " \
 				   "Взял ее за хвост, положил под мост, пускай ворона мокнет."
 		needle = "Взял"
-		self.assertEqual(kmp_algo(haystack, needle), haystack.index(needle), "Не взяли ворону, ворона вся и высохла.")
+		self.assertEqual(haystack.index(needle), kmp_algo(haystack, needle), "Не взяли ворону, ворона вся и высохла.")
 
 	def test_missing(self):
 		haystack = "Because only a ginger can call another ginger ginger!"

@@ -4,7 +4,7 @@ import Tasks.c0_fib as fib
 
 class MyTestCase(unittest.TestCase):
 	def test_fib_recursive(self):
-		self.assertEqual(fib.fib_recursive(8), 21,
+		self.assertEqual(21, fib.fib_recursive(8),
 						 msg="Something wrong. Do you remember that Fibonacci sequence start from 0?..")
 
 	def test_fib_exc(self):
@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
 			fib.fib_recursive(-35)
 
 	def test_fib_iterative(self):
-		self.assertEqual(fib.fib_iterative(9), 34,
+		self.assertEqual(34, fib.fib_iterative(9),
 						 msg="Something wrong. Do you remember that Fibonacci sequence start from 0?..")
 
 	def test_fib_iter_exc(self):

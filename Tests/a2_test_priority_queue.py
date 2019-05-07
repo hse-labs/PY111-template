@@ -34,15 +34,15 @@ class MyTestCase(unittest.TestCase):
 		priority_queue.enqueue(3)
 		priority_queue.enqueue(5)
 
-		self.assertEqual(priority_queue.peek(), 3)
-		self.assertEqual(priority_queue.peek(1), 5)
-		self.assertEqual(priority_queue.peek(), 3)
+		self.assertEqual(3, priority_queue.peek())
+		self.assertEqual(5, priority_queue.peek(1))
+		self.assertEqual(3, priority_queue.peek())
 
 	def test_en_de_queue_with_priority(self):
 		priority_queue.enqueue(0, 1)
 		priority_queue.enqueue(10, 0)
 
-		self.assertEqual(priority_queue.dequeue(), 10)
+		self.assertEqual(10, priority_queue.dequeue())
 
 
 if __name__ == '__main__':

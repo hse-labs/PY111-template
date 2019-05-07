@@ -28,15 +28,15 @@ class MyTestCase(unittest.TestCase):
 		for _ in items:
 			received_items.append(my_stack.pop())
 
-		self.assertEqual(items[::-1], received_items)
+		self.assertEqual(reversed(items), received_items)
 
 	def test_peek(self):
 		my_stack.push(3)
 		my_stack.push(5)
 
-		self.assertEqual(my_stack.peek(), 5)
-		self.assertEqual(my_stack.peek(1), 3)
-		self.assertEqual(my_stack.peek(), 5)
+		self.assertEqual(5, my_stack.peek())
+		self.assertEqual(3, my_stack.peek(1))
+		self.assertEqual(5, my_stack.peek())
 
 
 if __name__ == '__main__':

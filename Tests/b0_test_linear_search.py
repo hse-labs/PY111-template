@@ -9,8 +9,8 @@ class MyTestCase(unittest.TestCase):
 	def check_min(self, arr):
 		min_index = arr.index(min(arr))
 		self.assertEqual(
-			min_search(arr),
 			min_index,
+			min_search(arr),
 			self.errstr + str(min_index))
 
 	def test_min(self):

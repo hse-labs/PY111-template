@@ -25,7 +25,7 @@ class MyTestCase(unittest.TestCase):
 		except Exception as e:
 			print(e)
 			self.fail(
-				"Do not forget about deleting non-existing keys and double deleting of similar keys. "
+				"Do not forget about deleting non-existing keys. "
 				"I think that deleting of non-existing keys should be silent, unlike search.")
 
 	def test_find(self):
@@ -33,8 +33,8 @@ class MyTestCase(unittest.TestCase):
 		bst.insert(13, "And again")
 		bst.insert(-999, "Nobody expects spanish inquisition!")
 		self.assertEqual(
-			bst.find(13),
 			"And again",
+			bst.find(13),
 			msg="Something gonna wrong..."
 		)
 
