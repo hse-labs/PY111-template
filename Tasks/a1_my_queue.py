@@ -23,7 +23,7 @@ def dequeue():
 
 	:return: dequeued element
 	"""
-	if my_queue:
+	if not my_queue:
 		return None
 	else:
 		return my_queue.pop(0)

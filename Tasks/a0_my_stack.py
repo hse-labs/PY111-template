@@ -23,7 +23,7 @@ def pop():
 
 	:return: popped element
 	"""
-	if my_stack:
+	if not my_stack:
 		return None
 	else:
 		return my_stack.pop()
