@@ -36,7 +36,7 @@ def peek(ind: int = 0):
 	:param ind: index of element (count from the top)
 	:return: peeked element
 	"""
-	return my_stack[ind-1]
+	return my_stack[ind - 1]
 
 
 def clear() -> None:
