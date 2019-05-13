@@ -18,11 +18,6 @@ def view(directory, listt):  # todo  вывод списка библиотек�
     return listt
 
 
-def view_filt(list_for, a):
-    for i in range(len(list_for)):
-        print(f'{i+1}. {fil(list_for, a)[i]}')
-
-
 def number_book():
     selected_book_number = int(input('Впишите НОМЕР книги, с которой произвести действие \n'))
     selected_book_number = selected_book_number - 1
@@ -38,19 +33,25 @@ def transfer_file_to_lib(book, d_c, d_a_b):  # todo добавление в би
         shutil.move(directory_file_choice, directory_file_added)
 
 
-def read(ft, dir):
+def read(ft, dir, num):
     file = f'{dir}/{ft}'
     with open(file, "r") as myfile:
-        fr = [line for line in myfile.readlines()]
+        li = myfile.readlines()
+        if int(num) > 2:
+            fr = [li[line] for line in range(len(li)) if line >= 3]
+        else:
+            fr = [li[line] for line in range(len(li))]
         fo = iter(fr)
         try:
             for i in count():
                 print(next(fo))
                 print(next(fo))
                 print(next(fo))
-                tn = input('Читаем дальше, "Любая клавиша", заканчиваем "n')
+                tn = input('Читаем дальше, "Любая клавиша", ВЫХОД в МЕНЮ " n "')
                 if tn == 'n':
                     break
+                if tn == 'r':
+                    pass
         except StopIteration:
             print('Книга закончилась')
             print()
@@ -59,6 +60,11 @@ def read(ft, dir):
 def fil(lstt, a):
     filt = list(filter(lambda x: a in x, lstt))
     return filt
+
+
+def view_filt(list_for, a):
+    for i in range(len(list_for)):
+        print(f'{i+1}. {fil(list_for, a)[i]}')
 
 
 if __name__ == '__main__':
@@ -79,7 +85,15 @@ if __name__ == '__main__':
             print('Нужно ли отфильтровать список, (y,n)')
             vb = input('Введите (y,n)')
             if vb == 'n':
-                continue
+                ann = input('Хотите прочитать аннотацию? Нет " n " , Да , любая ')
+                print()
+                if ann == 'n':
+                    continue
+                else:
+                    try:
+                        read(list_added_books[number_book()], directory_added_books, num)
+                    except IndexError:
+                        print('Нет такой позиции')
             else:
                 a = input('Введите данные для фильтрации')
                 if fil(list_added_books, a) == []:
@@ -89,13 +103,29 @@ if __name__ == '__main__':
                 else:
                     view_filt(fil(list_added_books, a), a)
                     print()
+                    ann = input('Хотите прочитать аннотаци? Нет " n " , Да , любая ')
+                    if ann == 'n':
+                        continue
+                    else:
+                        try:
+                            read(list_added_books[number_book()], directory_added_books, num)
+                        except IndexError:
+                            print('Нет такой позиции')
         if num == '2':
             view(directory_choice, list_for_analysis)
             print()
             print('Нужно ли отфильтровать список, (y,n)')
             vb_2 = input('Введите (y,n)')
             if vb_2 == 'n':
-                continue
+                ann = input('Хотите прочитать аннотацию? Нет " n " , Да , любая ')
+                print()
+                if ann == 'n':
+                    continue
+                else:
+                    try:
+                        read(list_for_analysis[number_book()], directory_choice, num)
+                    except IndexError:
+                        print('Нет такой позиции')
             else:
                 a = input('Введите данные для фильтрации')
                 if fil(list_for_analysis, a) == []:
@@ -105,6 +135,14 @@ if __name__ == '__main__':
                 else:
                     view_filt(fil(list_for_analysis, a), a)
                     print()
+                    ann = input('Хотите прочитать аннотаци? Нет " n " , Да , любая ')
+                    if ann == 'n':
+                        continue
+                    else:
+                        try:
+                            read(list_for_analysis[number_book()], directory_choice, num)
+                        except IndexError:
+                            print('Нет такой позиции')
         if num == '3':
             view(directory_choice, list_for_analysis)
             print()
@@ -129,7 +167,10 @@ if __name__ == '__main__':
             print('Нужно ли отфильтровать список, (y,n)')
             vb_2 = input('Введите (y,n)')
             if vb_2 == 'n':
-                read(list_added_books[number_book()], directory_added_books)
+                try:
+                    read(list_added_books[number_book()], directory_added_books, num)
+                except IndexError:
+                    print('Нет такой позиции')
             else:
                 a = input('Введите данные для фильтрации')
                 view_filt(fil(list_added_books, a), a)
@@ -138,7 +179,10 @@ if __name__ == '__main__':
                     print()
                     continue
                 else:
-                    read(fil(list_added_books, a)[number_book()], directory_added_books)
+                    try:
+                        read(list_added_books[number_book()], directory_added_books, num)
+                    except IndexError:
+                        print('Нет такой позиции')
         if num == '5':
             view(directory_added_books, list_added_books)
             print()
