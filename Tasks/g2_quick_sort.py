@@ -1,9 +1,9 @@
-from typing import Sequence, TypeVar
+from typing import Collection, TypeVar
 
 __Tt = TypeVar("__Tt")
 
 
-def sort(container: Sequence[__Tt]) -> Sequence[__Tt]:
+def sort(container: Collection[__Tt]) -> Collection[__Tt]:
 	"""
 	Sort input container with quick sort
 
