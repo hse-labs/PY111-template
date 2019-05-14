@@ -1,6 +1,6 @@
 from typing import Sequence, TypeVar
 
-__Tt = TypeVar("T")
+__Tt = TypeVar("__Tt")
 
 
 def sort(container: Sequence[__Tt]) -> Sequence[__Tt]:
