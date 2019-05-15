@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
 		self.assertAlmostEqual(ex(const), math.exp(const), delta=0.0001, msg="More accurate! :D")
 
 	def test_sinx(self):
-		const = 1.55433
+		const = 6
 		self.assertAlmostEqual(sinx(const), math.sin(const), delta=0.0001, msg="More accurate! :D")
 
 
