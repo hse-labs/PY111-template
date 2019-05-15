@@ -6,7 +6,7 @@ import Tasks.e0_breadth_first_search as bfs
 class MyTestCase(unittest.TestCase):
 	def test_bfs(self):
 		graph = nx.Graph()
-		graph.add_nodes_from(["ABCDEFGHIJ"])
+		graph.add_nodes_from("ABCDEFGHIJ")
 		graph.add_edges_from([
 			('A', 'B'),
 			('A', 'F'),
