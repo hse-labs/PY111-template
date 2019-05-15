@@ -10,5 +10,15 @@ def dfs(g: nx.Graph, start_node: Any) -> list:
 	:param start_node: starting node of search
 	:return: list of nodes in the visited order
 	"""
-	print(g, start_node)
-	return list(g.nodes)
+	visited_nodes = []
+	nodes_stack = [start_node]
+	while nodes_stack:
+		node = nodes_stack.pop()
+		visited_nodes.append(node)
+		for edge in g.edges:
+			if node in edge:
+				if edge[1] not in visited_nodes:
+					nodes_stack.append(edge[1])
+				if edge[0] not in visited_nodes:
+					nodes_stack.append(edge[0])
+	return visited_nodes
