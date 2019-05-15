@@ -1,3 +1,8 @@
+"""
+You can do it either with networkx ('cause tree is a graph)
+or with dicts (smth like {'key': 0, 'left': {...}, 'right':{...})
+"""
+
 from typing import Hashable, Any, Optional
 # import networkx as nx
 
