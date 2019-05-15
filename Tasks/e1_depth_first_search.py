@@ -15,26 +15,6 @@ def dfs(g: nx.Graph, start_node: Any) -> list:
 		vertex = stack.pop()
 		if vertex not in visited:
 			visited.append(vertex)
-			stack.extend(g[vertex] )
+			stack.extend(g[vertex])
 
 	return visited
-
-G = nx.Graph()
-G.add_nodes_from("ABCDEFGHIJ")
-G.add_edges_from([
-			('A', 'B'),
-			('A', 'F'),
-			('B', 'G'),
-			('F', 'G'),
-			('G', 'C'),
-			('G', 'H'),
-			('G', 'I'),
-			('C', 'H'),
-			('I', 'H'),
-			('H', 'D'),
-			('H', 'E'),
-			('H', 'J'),
-			('E', 'D'),
-		])
-
-print(dfs(G, 'A'))

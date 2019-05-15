@@ -1,13 +1,13 @@
-from typing import Sequence, TypeVar
-
-_Tt = TypeVar("T")
+import random
 
 
-def sort(container: Sequence[_Tt]) -> Sequence[_Tt]:
-	"""
-	Sort input container with quick sort
+def sort(nums):
+	if len(nums) <= 1:
+		return nums
+	else:
+		q = random.choice(nums)
+	l_nums = [n for n in nums if n < q]
 
-	:param container: container of elements to be sorted
-	:return: container sorted in ascending order
-	"""
-	return container
+	e_nums = [q] * nums.count(q)
+	b_nums = [n for n in nums if n > q]
+	return sort(l_nums) + e_nums + sort(b_nums)
