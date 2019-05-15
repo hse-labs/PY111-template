@@ -1,5 +1,24 @@
 from typing import Any
 # import networkx as nx
+tree = {}
+head_node = None
+
+
+def req_ins(k, v, hn):
+	global tree
+	if k < hn and tree[hn][1] is None:
+		tree[k] = [v, None, None]
+		tree[hn][1] = k
+	elif k > hn and tree[hn][2] is None:
+		tree[k] = [v, None, None]
+		tree[hn][2] = k
+	elif hn > k != tree[hn][1] and tree[hn][1] is not None:
+		req_ins(k, v, tree[hn][1])
+	elif hn < k != tree[hn][1] and tree[hn][1] is not None:
+		req_ins(k, v, tree[hn][2])
+	else:
+		return None
+
 
 
 def insert(key: Any, value: Any) -> None:
@@ -10,7 +29,16 @@ def insert(key: Any, value: Any) -> None:
 	:param value: value associated with key
 	:return: None
 	"""
-	print(key, value)
+	global tree
+	global head_node
+
+	if not tree:
+		head_node = key
+		tree[key] = [value, None, None]
+	elif key == head_node:
+		tree[key] = [value, None, None]
+	else:
+		req_ins(key, value, head_node)
 	return None
 
 
@@ -21,7 +49,12 @@ def remove(key: Any) -> (Any, Any):
 	:param key: key to be removed
 	:return: deleted (key, value) pair
 	"""
-	print(key)
+
+
+	try:
+		del tree[key]
+	except Exception:
+		return None
 	return None
 
 
@@ -42,4 +75,6 @@ def clear() -> None:
 
 	:return: None
 	"""
+	global tree
+	tree = {}
 	return None
