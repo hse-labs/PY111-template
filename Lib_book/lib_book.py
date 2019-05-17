@@ -78,19 +78,10 @@ def read(ft, dir, num):
             print()
 
 
-
-
-
-        # li = myfile.readlines()
-        # if int(num) > 2:
-        #     fr = [li[line] for line in range(len(li)) if line >= 3]
-
-
-
 def fil(lstt, a):
     filt = list(filter(lambda x: a in x, lstt))
     return filt
-4
+
 
 def view_filt(list_for, a):
     for i in range(len(list_for)):
