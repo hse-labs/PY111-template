@@ -44,7 +44,7 @@ def peek(ind: int = 0, priority: int = 0):
     """
     global q
     qq = q[priority]
-    return qq[ind]
+    return qq[-ind-1]
 
 
 def clear() -> None:
@@ -63,10 +63,8 @@ if __name__ == "__main__":
     enqueue(11, 1)
     enqueue(22, 2)
     enqueue(23, 2)
+    enqueue(24, 2)
     print(q)
-    print(len(q[2]))
-    print(peek(0, 1))
+    print(peek(0, 2))
     print(dequeue())
-    print(q)
-    clear()
     print(q)
