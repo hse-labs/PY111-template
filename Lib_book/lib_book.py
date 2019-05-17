@@ -33,6 +33,23 @@ def transfer_file_to_lib(book, d_c, d_a_b):  # todo добавление в би
         shutil.move(directory_file_choice, directory_file_added)
 
 
+def write(file):
+    with open(file, "r") as myfile2:
+        lines = myfile2.readlines()
+        inn = input('Введите НОВЫЕ данные или ENTER, если не хотите заменять строку.')
+        if inn != '':
+            lines[0] = inn + '\n'
+            if inn != '':
+                lines[1] = inn + '\n'
+                if inn != '':
+                    lines[2] = inn + '\n'
+
+    with open(file, "w") as myfile2:
+        myfile2.write(lines[0])
+        myfile2.write(lines[1])
+        myfile2.write(lines[2])
+
+
 def read(ft, dir, num):
     file = f'{dir}/{ft}'
     with open(file, "r") as myfile:
@@ -47,6 +64,10 @@ def read(ft, dir, num):
                 print(next(fo))
                 print(next(fo))
                 print(next(fo))
+                print('Заменить аннотацию')
+                write(file)
+                if int(num) <= 2:
+                    break
                 tn = input('Читаем дальше, "Любая клавиша", ВЫХОД в МЕНЮ " n "')
                 if tn == 'n':
                     break
@@ -57,10 +78,19 @@ def read(ft, dir, num):
             print()
 
 
+
+
+
+        # li = myfile.readlines()
+        # if int(num) > 2:
+        #     fr = [li[line] for line in range(len(li)) if line >= 3]
+
+
+
 def fil(lstt, a):
     filt = list(filter(lambda x: a in x, lstt))
     return filt
-
+4
 
 def view_filt(list_for, a):
     for i in range(len(list_for)):
@@ -92,6 +122,8 @@ if __name__ == '__main__':
                 else:
                     try:
                         read(list_added_books[number_book()], directory_added_books, num)
+                        # name = [list_added_books[number_book()]]
+                        # write(name, directory_added_books)
                     except IndexError:
                         print('Нет такой позиции')
             else:
