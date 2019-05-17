@@ -42,4 +42,4 @@ def kmp_algo(inp_string: str, substr: str) -> Optional[int]:
 
 
 if __name__ == '__main__':
-	print(kmp_algo("AAAAAAAAAFAAAAAAAAAAAAFAAAAAF", "AF"))
+	print(kmp_algo("AAFAAFAAF", "AF"))
