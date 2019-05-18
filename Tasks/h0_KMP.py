@@ -35,11 +35,11 @@ def kmp_algo(inp_string: str, substr: str) -> Optional[int]:
 		elif inp_string[i] != substr[j] and j == 0:
 			i += 1
 		elif inp_string[i] != substr[j] and j > 0:
-			i += 1
+			i += 1 - j
 			j = 0
 	print(inp_string, substr, prefix_fun)
 	return rez
 
 
 if __name__ == '__main__':
-	print(kmp_algo("AAFAAFAAF", "AF"))
+	print(kmp_algo("AAFAAFFAAFFF", "AF"))
