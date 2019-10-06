@@ -3,7 +3,7 @@ You can do it either with networkx ('cause tree is a graph)
 or with dicts (smth like {'key': 0, 'left': {...}, 'right':{...})
 """
 
-from typing import Hashable, Any, Optional
+from typing import Hashable, Any, Optional, Tuple
 # import networkx as nx
 
 
@@ -19,7 +19,7 @@ def insert(key: Hashable, value: Any) -> None:
 	return None
 
 
-def remove(key: Hashable) -> Optional[(Hashable, Any)]:
+def remove(key: Hashable) -> Optional[Tuple[Hashable, Any]]:
 	"""
 	Remove key and associated value from the BST if exists
 
