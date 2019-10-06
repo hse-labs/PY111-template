@@ -19,7 +19,7 @@ def insert(key: Hashable, value: Any) -> None:
 	return None
 
 
-def remove(key: Hashable) -> Optional[(Any, Any)]:
+def remove(key: Hashable) -> Optional[(Hashable, Any)]:
 	"""
 	Remove key and associated value from the BST if exists
 
@@ -30,7 +30,7 @@ def remove(key: Hashable) -> Optional[(Any, Any)]:
 	return None
 
 
-def find(key: Hashable) -> Optional:
+def find(key: Hashable) -> Optional[Any]:
 	"""
 	Find value by given key in the BST
 
