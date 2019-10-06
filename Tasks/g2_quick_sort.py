@@ -1,9 +1,9 @@
-from typing import List, TypeVar
+from typing import Collection, TypeVar
 
-T = TypeVar("T")
+_Tt = TypeVar("_Tt")
 
 
-def sort(container: List[T]) -> List[T]:
+def sort(container: Collection[_Tt]) -> Collection[_Tt]:
 	"""
 	Sort input container with quick sort
 
