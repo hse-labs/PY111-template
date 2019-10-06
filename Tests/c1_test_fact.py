@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
 			fact.factorial_recursive(-11231)
 
 	def test_fact_iterative(self):
-		self.assertEqual(math.factorial(12), fact.factorial_iterative(12), msg="I think it's a mistake :)")
+		self.assertEqual(math.factorial(12), fact.factorial_iterative(12), msg="I think there's a mistake :)")
 
 	def test_fact_iter_exc(self):
 		with self.assertRaises(ValueError, msg="ValueError should be here..."):
