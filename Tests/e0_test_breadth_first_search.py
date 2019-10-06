@@ -24,21 +24,21 @@ class MyTestCase(unittest.TestCase):
 		])
 		result = bfs.bfs(graph, 'A')
 		self.assertEqual(
-			len(result),
 			10,
+			len(result),
 			msg="Проверьте возвращаемый список - в него либо затесались лишние элементы, либо не хватает элементов."
 		)
 
 		result = \
-			list(result[0]) \
+			[result[0]] \
 			+ sorted(result[1:3]) \
-			+ list(result[3]) \
+			+ [result[3]] \
 			+ sorted(result[4:7]) \
 			+ sorted(result[7:])
 
 		self.assertEqual(
-			result,
 			list("ABFGCHIDEJ"),
+			result,
 			msg="Возвращаемый список несоответствует нужному порядку обхода."
 		)
 

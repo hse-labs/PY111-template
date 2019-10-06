@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional, Sequence
 
 
 def kmp_algo(inp_string: str, substr: str) -> Optional(int):
@@ -10,7 +10,7 @@ def kmp_algo(inp_string: str, substr: str) -> Optional(int):
 	:return: index where first occurrence of substr in inp_string started or None if not found
 	"""
 
-	def prefix_fun(prefix_str: str) -> List[int]:
+	def prefix_fun(prefix_str: str) -> Sequence[int]:
 		"""
 		Prefix function for KMP
 

@@ -8,8 +8,8 @@ class MyTestCase(unittest.TestCase):
 	def test_sorted(self):
 		arr = [random.randint(-100, 100) for _ in range(30)]
 		self.assertEqual(
-			sorter.sort(arr),
-			sorted(arr)
+			sorted(arr),
+			sorter.sort(arr)
 		)
 
 

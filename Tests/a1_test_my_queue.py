@@ -34,9 +34,9 @@ class MyTestCase(unittest.TestCase):
 		my_queue.enqueue(3)
 		my_queue.enqueue(5)
 
-		self.assertEqual(my_queue.peek(), 3)
-		self.assertEqual(my_queue.peek(1), 5)
-		self.assertEqual(my_queue.peek(), 3)
+		self.assertEqual(3, my_queue.peek())
+		self.assertEqual(5, my_queue.peek(1))
+		self.assertEqual(3, my_queue.peek())
 
 
 if __name__ == '__main__':

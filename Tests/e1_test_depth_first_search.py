@@ -17,8 +17,8 @@ class MyTestCase(unittest.TestCase):
 		])
 		result = dfs.dfs(graph, 'A')
 		self.assertEqual(
-			len(result),
 			7,
+			len(result),
 			msg="Проверьте возвращаемый список - в него либо затесались лишние элементы, либо не хватает элементов."
 		)
 
