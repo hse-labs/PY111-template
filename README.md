@@ -8,7 +8,7 @@
 - Присоедините вашу ветку к этому репозиторию, выполнив следующую команду:
  
 ```
-git remote add -t master python https://github.com/maybe-hello-world/PY111-april
+git remote add -t master python https://github.com/hse-labs/PY111-template
 ```
 
 Вы можете посмотреть список подключенных удаленных источников с помощью команды `git remote show`. Результат должен быть примерно следующим:
