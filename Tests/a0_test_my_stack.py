@@ -39,6 +39,8 @@ class MyTestCase(unittest.TestCase):
 		self.assertEqual(5, my_stack.peek())
 		self.assertEqual(3, my_stack.peek(1))
 		self.assertEqual(5, my_stack.peek())
+		
+		self.assertIsNone(my_stack.peek(100), msg="Should return None if no elements")
 
 
 if __name__ == '__main__':
