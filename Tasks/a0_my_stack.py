@@ -17,7 +17,7 @@ def push(elem: Any) -> None:
 
 def pop() -> Any:
 	"""
-	Pop element from the top of the stack
+	Pop element from the top of the stack. If not elements - should return None.
 
 	:return: popped element
 	"""
@@ -26,9 +26,9 @@ def pop() -> Any:
 
 def peek(ind: int = 0) -> Any:
 	"""
-	Allow you to see at the element in the stack without popping it
+	Allow you to see at the element in the stack without popping it.
 
-	:param ind: index of element (count from the top)
+	:param ind: index of element (count from the top, 0 - top, 1 - first from top, etc.)
 	:return: peeked element
 	"""
 	print(ind)
