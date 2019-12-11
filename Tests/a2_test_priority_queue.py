@@ -33,6 +33,7 @@ class MyTestCase(unittest.TestCase):
 	def test_peek(self):
 		priority_queue.enqueue(3)
 		priority_queue.enqueue(5)
+		priority_queue.enqueue(7)
 
 		self.assertEqual(3, priority_queue.peek())
 		self.assertEqual(5, priority_queue.peek(1))
