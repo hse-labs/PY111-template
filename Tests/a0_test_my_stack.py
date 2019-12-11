@@ -33,6 +33,7 @@ class MyTestCase(unittest.TestCase):
 	def test_peek(self):
 		my_stack.push(3)
 		my_stack.push(5)
+		my_stack.push(7)
 
 		self.assertEqual(5, my_stack.peek())
 		self.assertEqual(3, my_stack.peek(1))
