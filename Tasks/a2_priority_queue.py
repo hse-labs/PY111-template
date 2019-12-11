@@ -18,7 +18,7 @@ def enqueue(elem: Any, priority: int = 0) -> None:
 
 def dequeue() -> Any:
 	"""
-	Return element from the beginning of the queue
+	Return element from the beginning of the queue. Should return None if not elements.
 
 	:return: dequeued element
 	"""
