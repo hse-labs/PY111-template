@@ -39,11 +39,27 @@ class MyTestCase(unittest.TestCase):
 		self.assertEqual(5, priority_queue.peek(1))
 		self.assertEqual(3, priority_queue.peek())
 
-	def test_en_de_queue_with_priority(self):
+	def test_en_de_queue_with_priority_simple(self):
 		priority_queue.enqueue(0, 1)
 		priority_queue.enqueue(10, 0)
 
 		self.assertEqual(10, priority_queue.dequeue())
+
+	def test_en_de_queue_with_priority_complex(self):
+		high_priority = 0
+		medium_priority = 5
+		low_priority = 10
+		priority_queue.enqueue(10, high_priority)
+		priority_queue.enqueue(0, low_priority)
+
+		self.assertEqual(10, priority_queue.dequeue())
+
+		priority_queue.enqueue(1, low_priority)
+		priority_queue.enqueue(5, medium_priority)
+
+		self.assertEqual(5, priority_queue.dequeue())
+		self.assertEqual(0, priority_queue.dequeue())
+		self.assertEqual(1, priority_queue.dequeue())
 
 
 if __name__ == '__main__':

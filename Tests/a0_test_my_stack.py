@@ -12,6 +12,9 @@ class MyTestCase(unittest.TestCase):
 
 		self.assertIsNone(my_stack.pop())
 
+	def test_empty_stack(self):
+		self.assertIsNone(my_stack.pop(), msg="Should return None if no elements")
+
 	def test_push_pop(self):
 		initial_elem = 3
 		my_stack.push(initial_elem)
