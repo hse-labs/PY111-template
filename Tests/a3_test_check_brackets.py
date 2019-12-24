@@ -7,6 +7,7 @@ class MyTestCase(unittest.TestCase):
 		self.assertFalse(check_brackets("(()("))
 		self.assertFalse(check_brackets("(()))"))
 		self.assertFalse(check_brackets("(()))"))
+		self.assertFalse(check_brackets(")("))
 
 	def test_valid(self):
 		self.assertTrue(check_brackets("(()())"))
