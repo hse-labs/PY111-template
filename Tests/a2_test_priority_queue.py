@@ -39,13 +39,7 @@ class MyTestCase(unittest.TestCase):
 		self.assertEqual(5, priority_queue.peek(1))
 		self.assertEqual(3, priority_queue.peek())
 
-	def test_en_de_queue_with_priority_simple(self):
-		priority_queue.enqueue(0, 1)
-		priority_queue.enqueue(10, 0)
-
-		self.assertEqual(10, priority_queue.dequeue())
-
-	def test_en_de_queue_with_priority_complex(self):
+	def test_en_de_queue_with_priority(self):
 		high_priority = 0
 		medium_priority = 5
 		low_priority = 10
