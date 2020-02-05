@@ -1,8 +1,12 @@
 import unittest
-from Tasks.h0_KMP import kmp_algo
+from Tasks.h0_KMP import kmp_algo, _prefix_fun
 
 
 class MyTestCase(unittest.TestCase):
+
+	def test_prefix_function(self):
+		needle = "abcaabca"
+		self.assertEqual([0, 0, 0, 1, 1, 2, 3, 4], _prefix_fun(needle), "Prefix function is wrong")
 
 	def test_begin(self):
 		haystack = "Hello, tiny world!"
