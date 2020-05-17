@@ -3,11 +3,11 @@ You can do it either with networkx ('cause tree is a graph)
 or with dicts (smth like {'key': 0, value: 123, 'left': {...}, 'right':{...}})
 """
 
-from typing import Hashable, Any, Optional, Tuple
+from typing import Any, Optional, Tuple
 # import networkx as nx
 
 
-def insert(key: Hashable, value: Any) -> None:
+def insert(key: int, value: Any) -> None:
     """
     Insert (key, value) pair to binary search tree
 
@@ -19,7 +19,7 @@ def insert(key: Hashable, value: Any) -> None:
     return None
 
 
-def remove(key: Hashable) -> Optional[Tuple[Hashable, Any]]:
+def remove(key: int) -> Optional[Tuple[int, Any]]:
     """
     Remove key and associated value from the BST if exists
 
@@ -30,7 +30,7 @@ def remove(key: Hashable) -> Optional[Tuple[Hashable, Any]]:
     return None
 
 
-def find(key: Hashable) -> Optional[Any]:
+def find(key: int) -> Optional[Any]:
     """
     Find value by given key in the BST
 

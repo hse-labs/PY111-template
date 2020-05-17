@@ -1,9 +1,7 @@
-from typing import List, TypeVar
-
-_Tt = TypeVar("_Tt")
+from typing import List
 
 
-def sort(container: List[_Tt]) -> List[_Tt]:
+def sort(container: List[int]) -> List[int]:
     """
     Sort input container with bubble sort
 

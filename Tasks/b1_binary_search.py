@@ -1,7 +1,7 @@
-from typing import Any, Sequence, Optional
+from typing import Sequence, Optional
 
 
-def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
+def binary_search(elem: int, arr: Sequence) -> Optional[int]:
     """
     Performs binary search of given element inside of array
 
