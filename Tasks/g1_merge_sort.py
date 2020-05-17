@@ -4,10 +4,10 @@ _Tt = TypeVar("_Tt")
 
 
 def sort(container: List[_Tt]) -> List[_Tt]:
-	"""
-	Sort input container with merge sort
+    """
+    Sort input container with merge sort
 
-	:param container: container of elements to be sorted
-	:return: container sorted in ascending order
-	"""
-	return container
+    :param container: container of elements to be sorted
+    :return: container sorted in ascending order
+    """
+    return container
