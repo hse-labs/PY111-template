@@ -1,7 +1,7 @@
 """
 Priority Queue
 
-Queue priorities are from 0 to 5
+Queue priorities are from 0 to 10
 """
 from typing import Any
 
