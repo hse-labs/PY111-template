@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_fact_iter_exc(self):
         with self.assertRaises(ValueError, msg="ValueError should be here..."):
-            fact.factorial_recursive(-1121)
+            fact.factorial_iterative(-1121)
 
 
 if __name__ == '__main__':
